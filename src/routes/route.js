@@ -1,19 +1,29 @@
 const express = require('express');
 const abc = require('../introduction/intro')
 const router = express.Router();
-const lodash =require('lodash')
-router.get('/test-me', function (req, res) {
-    //console.log('My batch is', abc.name)
-   // abc.printName()
-   
 
-    let months = ['January', 'February', 'March', 'April', 'May',
-     'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-const a=lodash.chunk(months,3)
+ const lodash =require('lodash')
+  router.get('/test-me', function (req, res) {
+    
+  let months = ['January', 'February', 'March', 'April', 'May',
+  'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+ const a=lodash.chunk(months,3)
 console.log(a)
 
-    res.send('My second ever api!')
-});
+   res.send('My ist ever api!')
+ });
+
+// router.get('/movies/:indexNumber',function(req, res)  {
+    // const movies=[" Rang de basanti ", " The shining ", " Lord of the rings ", " Batman begins "]
+   // console.log(req.params, indexNumber)
+     // res.send('dummy response')
+
+// });
+
+
+
+
+
 
 router.get('/students', function (req, res){
     let students = ['Sabiha', 'Neha', 'Akash']
